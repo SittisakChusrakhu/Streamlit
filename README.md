@@ -1,4 +1,5 @@
-แอปพลิเคชันวิเคราะห์ข้อความ
+##แอปพลิเคชันวิเคราะห์ข้อความ##
+
 แอปพลิเคชัน Streamlit นี้ช่วยให้ผู้ใช้สามารถวิเคราะห์ข้อความได้รวมถึงการวิเคราะห์ความรู้สึกของข้อความด้วยความสามารถในการแสดงข้อมูลเกี่ยวกับความรู้สึก จำนวนคำ และจำนวนประโยคในข้อความที่รับเข้ามา
 
 วิธีการติดตั้ง
@@ -28,40 +29,4 @@ nltk.download('punkt')
 
 รูปภาพป้ายชื่อความรู้สึก: ขึ้นอยู่กับป้ายชื่อความรู้สึกว่าเป็น "Positive", "Negative", หรือ "Neutral" รูปภาพที่สอดคล้องกับความรู้สึกจะถูกแสดง
 
-ตัวอย่างโค้ด
 
-import streamlit as st
-from textblob import TextBlob
-import nltk
-nltk.download('punkt')
-import re
-from nltk.tokenize import sent_tokenize
-
-# Function to analyze sentiment
-def analyze_sentiment(text):
-    # Perform sentiment analysis using TextBlob and NLTK
-    ...
-
-# Streamlit interface
-st.title("Text Analysis")
-
-text_inp = st.text_area("Input your text")
-# Upload file
-...
-
-if st.button("Analyze Text"):
-    sentiment_score, word_count, sentiment_label, sentiment_desc, words, sentence_count = analyze_sentiment(text_inp)  
-
-    st.write(f"ค่าความรู้สึก: {sentiment_score}")
-    st.write("รายละเอียดความรู้สึก:")
-    st.write(sentiment_desc)
-    st.write(f"จำนวนประโยคในข้อความ: {sentence_count} ประโยค")
-    st.write(f"จำนวนคำในข้อความ: {word_count} คำ")
-    st.write("|".join(words))
-    # Display sentiment label with image
-    if sentiment_label == "Positive":
-        st.image("Positive.gif", caption="Positive")
-    elif sentiment_label == "Negative":
-        st.image("Negative.gif", caption="Negative")
-    else:
-        st.image("Neutral.gif", caption="Neutral")
