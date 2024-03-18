@@ -1,7 +1,5 @@
 import streamlit as st
 from textblob import TextBlob
-import nltk
-nltk.download('punkt')
 import re
 from nltk.tokenize import sent_tokenize
 

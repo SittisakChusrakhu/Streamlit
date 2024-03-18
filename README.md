@@ -38,3 +38,5 @@
 * ขึ้นอยู่กับป้ายชื่อความรู้สึกว่าเป็น "Positive", "Negative", หรือ "Neutral" รูปภาพที่สอดคล้องกับความรู้สึกจะถูกแสดง
 
 
+## Video examples
+[video](https://drive.google.com/file/d/1gs-1DH85tZlrM27GSZu56k7qCTKBPdT9/view?usp=sharing)
